@@ -14,6 +14,7 @@
 Route::get('/', function () {
 	return redirect('/blog');
 });
+Route::get('/test','TestController@index');
 Route::get('/blog','BlogController@index')->name('blog.name');
 Route::get('/blog/{slug}','BlogController@showPost')->name('blog.detail');
 
@@ -23,8 +24,9 @@ Route::get('/admin', function () {
 });
 
 Route::middleware('auth')->namespace('Admin')->group(function (){
-	Route::resource('admin/post', 'PostController');
-	Route::resource('admin/tag', 'TagController');
+	Route::resource('admin/post', 'PostController',['except' => 'show']);
+	Route::resource('admin/tag', 'TagController', ['except' => 'show']);
+	
 	Route::get('admin/upload', 'UploadController@index');
 	// 添加如下路由
 	Route::post('admin/upload/file', 'UploadController@uploadFile');
@@ -36,4 +38,6 @@ Route::middleware('auth')->namespace('Admin')->group(function (){
 Route::get('/login','Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login','Auth\LoginController@login');
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
+
+
 
