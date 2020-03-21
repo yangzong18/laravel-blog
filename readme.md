@@ -49,3 +49,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## 说明
+
+walker 自己按照laravel-5.7 教程，写的简单blog 系统，自身laravel 是laravel 5.5 版本。编写过程遇到很多问题，不过自己都解决了。
+
+## 前端运行
+
+第一次安装 npm install
+使安装生效 npm run dev
+
