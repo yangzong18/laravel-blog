@@ -13,6 +13,7 @@ return [
 	'author' => '学院君',
 	'page_image' => 'home-bg.jpg',
 	'posts_per_page' => 10,
+	'rss_size' => 25,
 	'uploads' => [
 		'storage' => 'public',
 		'webpath' => '/storage',
