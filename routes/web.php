@@ -14,7 +14,11 @@
 Route::get('/', function () {
 	return redirect('/blog');
 });
-Route::get('/test','TestController@index');
+//Route::get('/test/{name}','TestController@{$name}');
+Route::get('test/{id}', function ($id) {
+    $Control = new \App\Http\Controllers\TestController();
+    return $Control->{$id}();
+});
 Route::get('/blog','BlogController@index')->name('blog.name');
 Route::get('/blog/{slug}','BlogController@showPost')->name('blog.detail');
 

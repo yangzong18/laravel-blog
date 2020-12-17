@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        \App\Console\Commands\Stat_Test::class
     ];
 
     /**
@@ -26,7 +27,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-		$schedule->command('queue:work')->everyMinute();
+		$schedule->command('Stat:test')->everyMinute();
     }
 
     /**

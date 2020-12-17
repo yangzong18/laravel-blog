@@ -11,3 +11,8 @@ npm-debug.log
 yarn-error.log
 .env
 .history
+
+curl -X POST http://laravel.blog.com//api/register \
+    -H "Accept: application/json" \
+    -H "Content-Type: application/json" \
+    -d '{"name": "user01", "email": "user01@test.com.cn", "password": "test123", "password_confirmation": "test123"}'

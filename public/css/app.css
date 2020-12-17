@@ -17525,3 +17525,7 @@ dd {
   margin-bottom: 10px;
 }
 
+#preview-image {
+    width: 100%;
+}
+
